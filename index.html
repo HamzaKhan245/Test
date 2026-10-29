@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#241344" />
+  <title>For My Favorite Person ♡</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="floating-hearts" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <span class="brand">a little world for you <span>♡</span></span>
+    <button class="sound-toggle" id="soundToggle" aria-label="Toggle soft sound">♫ <span>Sound off</span></button>
+  </header>
+
+  <main>
+    <section class="screen hero active" id="screen0">
+      <div class="eyebrow">A tiny surprise, made with love</div>
+      <div class="hero-heart" aria-hidden="true">♥</div>
+      <p class="small-caps">TODAY IS ALL ABOUT</p>
+      <h1 id="heroName">My Favorite Girl</h1>
+      <p class="lead">I made you a little universe. Take your time exploring it. Every part has a piece of my heart.</p>
+      <button class="primary-btn" data-next="1">Open your surprise <span>→</span></button>
+      <div class="scroll-hint">made just for you · with all my heart</div>
+    </section>
+
+    <section class="screen" id="screen1">
+      <div class="section-number">01 / A LITTLE MAGIC</div>
+      <h2>Look what love can grow…</h2>
+      <p class="section-copy">Tap the little stars and watch your garden bloom.</p>
+      <div class="garden-wrap">
+        <div class="garden-glow"></div>
+        <div class="tree">
+          <div class="trunk"></div>
+          <div class="branch branch-a"></div><div class="branch branch-b"></div>
+          <div class="branch branch-c"></div><div class="branch branch-d"></div>
+          <div class="blossoms" id="blossoms"></div>
+        </div>
+        <div class="garden-stars" id="gardenStars">
+          <button class="tiny-star" style="--x:12%;--y:20%">✦</button>
+          <button class="tiny-star" style="--x:80%;--y:15%">✧</button>
+          <button class="tiny-star" style="--x:23%;--y:55%">✧</button>
+          <button class="tiny-star" style="--x:72%;--y:48%">✦</button>
+          <button class="tiny-star" style="--x:48%;--y:10%">✧</button>
+        </div>
+      </div>
+      <p class="hint" id="gardenHint">Every tap is a little wish for you.</p>
+      <button class="primary-btn" data-next="2">Keep going <span>→</span></button>
+    </section>
+
+    <section class="screen" id="screen2">
+      <div class="section-number">02 / MAKE A WISH</div>
+      <h2>One little candle. One big wish.</h2>
+      <p class="section-copy">Tap the candle to light it, then make a wish just for yourself.</p>
+      <div class="cake-scene">
+        <div class="cake-sparkles">✦　·　✧　·　✦</div>
+        <div class="flame" id="flame"></div>
+        <button class="candle" id="candle" aria-label="Light or blow out the candle"><span></span></button>
+        <div class="cake-top"></div>
+        <div class="cake-layer layer-one"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="cake-layer layer-two"></div>
+        <div class="cake-plate"></div>
+      </div>
+      <p class="hint" id="candleHint">Your wish is safe with the stars ✨</p>
+      <button class="primary-btn" data-next="3">Next little surprise <span>→</span></button>
+    </section>
+
+    <section class="screen" id="screen3">
+      <div class="section-number">03 / LET THE JOY FLOAT</div>
+      <h2>Pop a little happiness 🎈</h2>
+      <p class="section-copy">Tap every balloon. Each one carries a tiny reminder.</p>
+      <div class="balloon-field" id="balloonField">
+        <button class="balloon b1" data-message="You make ordinary days feel special."> <span></span></button>
+        <button class="balloon b2" data-message="Your smile is one of my favorite things."><span></span></button>
+        <button class="balloon b3" data-message="You deserve every beautiful thing in this world."><span></span></button>
+        <button class="balloon b4" data-message="I hope this year brings you soft days and big dreams."><span></span></button>
+        <button class="balloon b5" data-message="You are loved more than this little page can say."><span></span></button>
+      </div>
+      <p class="balloon-message" id="balloonMessage" aria-live="polite">A little surprise is waiting inside each one.</p>
+      <button class="primary-btn" data-next="4">See a memory <span>→</span></button>
+    </section>
+
+    <section class="screen" id="screen4">
+      <div class="section-number">04 / A MOMENT TO KEEP</div>
+      <h2>A little memory of us</h2>
+      <p class="section-copy">Replace this picture with one that always makes you smile.</p>
+      <label class="photo-card" for="photoUpload">
+        <div class="photo-placeholder" id="photoPlaceholder">
+          <span class="photo-icon">♡</span>
+          <strong>Your favorite photo goes here</strong>
+          <small>Tap to add a picture from your device</small>
+        </div>
+        <img id="memoryPhoto" alt="Your favorite memory" hidden />
+        <span class="photo-tape"></span>
+        <span class="photo-caption">my favorite kind of happiness</span>
+      </label>
+      <input type="file" id="photoUpload" accept="image/*" hidden />
+      <p class="hint">Your photo stays on this device; it isn't uploaded anywhere.</p>
+      <button class="primary-btn" data-next="5">There's one last thing… <span>→</span></button>
+    </section>
+
+    <section class="screen" id="screen5">
+      <div class="section-number">05 / OPEN WHEN YOU'RE READY</div>
+      <h2>I wrote something for you.</h2>
+      <p class="section-copy">No rush. This little letter is yours.</p>
+      <button class="envelope" id="openLetter" aria-label="Open your letter">
+        <span class="envelope-back"></span><span class="letter-paper"></span><span class="envelope-front"></span><span class="envelope-flap"></span>
+        <span class="seal">♥</span>
+      </button>
+      <p class="hint" id="letterHint">Tap the envelope to open your letter.</p>
+      <article class="letter" id="letter" aria-live="polite">
+        <p class="letter-to">To my favorite person,</p>
+        <p>Happy birthday, my love. ♡</p>
+        <p>I hope you always remember how special you are—not just today, but on the quiet, ordinary days too. You deserve a life full of genuine smiles, peaceful nights, brave dreams, and people who show up for you.</p>
+        <p>Thank you for being you. If I could wish one thing for you, it would be that you see yourself through the eyes of the people who love you: wonderful, precious, and more than enough.</p>
+        <p>May this new chapter be gentle with your heart and generous with your dreams. And wherever life takes us, I hope you never forget that someone is cheering for you with their whole heart.</p>
+        <p class="signature">Always cheering for you,<br /><span id="senderName">your person</span> ♡</p>
+      </article>
+      <button class="primary-btn" id="finalReveal">One last surprise <span>♡</span></button>
+    </section>
+
+    <section class="screen finale" id="screen6">
+      <div class="firework" aria-hidden="true">✦</div>
+      <div class="final-crown">✧</div>
+      <p class="small-caps">TODAY, TOMORROW, ALWAYS</p>
+      <h1>Happy Birthday,<br /><span id="finalName">My Favorite Girl</span>!</h1>
+      <p class="lead">May your life be as lovely as the love you give to the world.</p>
+      <div class="final-heart">♥</div>
+      <p class="final-note">This little universe was made just for you.</p>
+      <button class="secondary-btn" id="replay">Experience it again ↺</button>
+      <p class="signature-line">with love, always ♡</p>
+      <div class="confetti" id="confetti"></div>
+    </section>
+  </main>
+
+  <nav class="progress" aria-label="Birthday story progress">
+    <span class="progress-dot current"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span><span class="progress-dot"></span>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
